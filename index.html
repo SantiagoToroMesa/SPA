@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="flex-container">
+    <div class="wrapper">
     <h1> SPA </h1>
     <nav>
         <a href="/users" data-link >Users</a>
         <a href="/newuser" data-link >New Users</a>
         <a href="/about" data-link >Acerca de usarios</a>
     </nav>
-
+    </div>
     <main id="content"></main>
-    
-    
-</body>
-<script src="./script.js">
+    </div>
 
+</body>
+<script src="./script.js" type="module">
 </script>
 </html>
