@@ -1,53 +1,87 @@
-# SPA con Vite
+# 🚀 User Management System - SPA
 
-Este proyecto es una Single Page Application (SPA) construida con JavaScript puro y Vite como entorno de desarrollo.
+Una aplicación de página única (SPA) moderna para la gestión de usuarios, construida con JavaScript vanilla, HTML5 y CSS3.
 
-##  Comenzar
+## ✨ Características
 
-### 1. Clonar el repositorio
+- **🔐 Autenticación de Usuarios**: Sistema de login seguro con roles
+- **👥 Gestión de Usuarios**: CRUD completo de usuarios
+- **🔒 Control de Acceso**: Roles de administrador y usuario regular
+- **📱 Diseño Responsivo**: Funciona en dispositivos móviles y desktop
+- **⚡ SPA Moderna**: Navegación sin recarga de página
 
-```bash
-git clone https://github.com/Riwi-io-Medellin/spa.git
-cd spa
+## 🛠️ Tecnologías Utilizadas
+
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Backend**: JSON Server (REST API)
+- **UI Components**: SweetAlert2
+- **Almacenamiento**: LocalStorage, SessionStorage
+
+## 📁 Estructura del Proyecto
+
+```
+spa/
+├── src/
+│   ├── js/
+│   │   ├── script.js          # Lógica principal
+│   │   └── services.js        # Servicios API
+│   ├── css/
+│   │   └── styles.css         # Estilos
+│   ├── html/
+│   │   ├── login.html         # Login
+│   │   ├── users.html         # Lista usuarios
+│   │   ├── newuser.html       # Crear usuario
+│   │   └── about.html         # Información
+│   └── images/
+│       └── descargar (7).jpg  # Logo
+├── db.json                    # Base de datos
+├── index.html                 # Punto de entrada
+└── README.md                  # Documentación
 ```
 
-### 2. Instalar dependencias
+## 🚀 Instalación y Ejecución
 
+### 1. Instalar dependencias
 ```bash
 npm install
 ```
 
-### 3. Levantar el servidor de desarrollo
-
+### 2. Ejecutar el proyecto
 ```bash
+# Opción 1: Ejecutar todo junto
 npm run dev
+
+# Opción 2: Ejecutar por separado
+npm run server    # Servidor JSON en puerto 3000
+npm run start     # Servidor web en puerto 8080
 ```
 
-Esto iniciará un servidor de desarrollo usando **Vite**. Puedes abrir la app en tu navegador en:
+### 3. Abrir la aplicación
+- Ve a `http://localhost:8080` en tu navegador
 
-```
-http://localhost:5173
-```
+## 📖 Uso
 
-##  Estructura del proyecto
+### Credenciales de Acceso
+- **Administrador**: `admin@example.com` / `admin123`
+- **Usuario**: `user@example.com` / `user123`
 
-```
-spa/
-├── index.html
-├── script.js
-├── styles.css
-├── package.json
-└── ...
-```
+### Funcionalidades
+- **👨‍💼 Administrador**: Ver, crear, editar y eliminar usuarios
+- **👤 Usuario Regular**: Solo ver lista de usuarios
 
-##  Tecnologías usadas
+## 🔧 Scripts Disponibles
 
-- **JavaScript**: Lógica principal de la SPA
-- **Vite**: Empaquetador rápido para desarrollo moderno
-- **HTML y CSS**: Estructura y estilos de la interfaz
+- `npm run server`: Inicia el servidor JSON (puerto 3000)
+- `npm run start`: Inicia el servidor web (puerto 8080)
+- `npm run dev`: Ejecuta ambos servidores simultáneamente
 
-##  Scripts disponibles
+## 📞 Contacto
 
-- `npm run dev`: Inicia el servidor de desarrollo con Vite
+- **Versión**: 1.0.0
+- **Última Actualización**: Diciembre 2024
+
+---
+
+⭐ ¡Disfruta usando la aplicación!
 
 

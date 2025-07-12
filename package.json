@@ -1,25 +1,30 @@
 {
-  "name": "spa",
+  "name": "user-management-spa",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "A modern Single Page Application for user management with role-based access control",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+    "server": "json-server --watch db.json --port 3000",
+    "start": "live-server --port=8080",
+    "dev": "concurrently \"npm run server\" \"npm run start\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daveshb/spa.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/daveshb/spa/issues"
-  },
-  "homepage": "https://github.com/daveshb/spa#readme",
+  "keywords": [
+    "spa",
+    "user-management",
+    "javascript",
+    "html5",
+    "css3",
+    "json-server"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
-    "vite": "^7.0.2"
+    "json-server": "^0.17.4",
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.2"
   }
 }

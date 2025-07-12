@@ -3,18 +3,22 @@
     {
       "id": "1",
       "name": "David Orjuela",
-      "email": "correo@ejemplo.com",
+      "email": "david@gmail.com",
       "phone": "12345678",
       "enrollNumber": "12345678901234",
-      "dateOfAdmission": "08-Dec-2021"
+      "dateOfAdmission": "08-Dec-2021",
+      "role": "user",
+      "password": "qwe123"
     },
     {
       "id": "2",
       "name": "Andres Niebles",
-      "email": "correo@ejemplo.com",
+      "email": "andresN@gmail.com",
       "phone": "1234567890",
       "enrollNumber": "12345678901234",
-      "dateOfAdmission": "08-Dec-2021"
+      "dateOfAdmission": "08-Dec-2021",
+      "role": "admin",
+      "password": "12qw"
     },
     {
       "id": "3",
@@ -22,7 +26,19 @@
       "email": "isabela@gmail.com",
       "phone": "3013299009",
       "enrollNumber": "343456695",
-      "dateOfAdmission": "2004-09-09"
+      "dateOfAdmission": "2004-09-09",
+      "role": "user",
+      "password": "32ew"
+    },
+    {
+      "id": "4",
+      "name": "Daniel quintero",
+      "email": "quintero@gmail.com",
+      "phone": "3135788178",
+      "enrollNumber": "666",
+      "dateOfAdmission": "2008-06-06",
+      "role": "user",
+      "password": "er45"
     }
   ]
 }

@@ -1,0 +1,130 @@
+<section class="about-section">
+  <div class="about-container">
+    <h2>About Our User Management System</h2>
+    
+    <div class="about-content">
+      <div class="about-card">
+        <h3>📋 Application Overview</h3>
+        <p>
+          This Single Page Application (SPA) is a comprehensive user management system designed to streamline 
+          the process of managing user data, roles, and permissions. Built with modern web technologies, 
+          it provides an intuitive interface for administrators and users alike.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <h3>🚀 Key Features</h3>
+        <ul>
+          <li><strong>User Management:</strong> Create, view, edit, and delete user profiles</li>
+          <li><strong>Role-Based Access:</strong> Different permissions for admin and regular users</li>
+          <li><strong>Secure Authentication:</strong> Login system with session management</li>
+          <li><strong>Real-time Updates:</strong> Dynamic content loading without page refreshes</li>
+          <li><strong>Responsive Design:</strong> Works seamlessly across all devices</li>
+          <li><strong>Session Tracking:</strong> Monitor user actions during active sessions</li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h3>🛠️ Technical Stack</h3>
+        <div class="tech-stack">
+          <div class="tech-item">
+            <span class="tech-label">Frontend:</span>
+            <span class="tech-value">Vanilla JavaScript, HTML5, CSS3</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">Architecture:</span>
+            <span class="tech-value">Single Page Application (SPA)</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">Backend:</span>
+            <span class="tech-value">JSON Server (REST API)</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">Storage:</span>
+            <span class="tech-value">Local Storage, Session Storage</span>
+          </div>
+          <div class="tech-item">
+            <span class="tech-label">UI Components:</span>
+            <span class="tech-value">SweetAlert2 for notifications</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3>👥 User Roles</h3>
+        <div class="roles-container">
+          <div class="role-item">
+            <h4>👨‍💼 Administrator</h4>
+            <ul>
+              <li>Full access to all user management features</li>
+              <li>Can create, edit, and delete user accounts</li>
+              <li>Access to the "New User" creation page</li>
+              <li>Complete system oversight capabilities</li>
+            </ul>
+          </div>
+          <div class="role-item">
+            <h4>👤 Regular User</h4>
+            <ul>
+              <li>View-only access to user listings</li>
+              <li>Can see all user information</li>
+              <li>Limited to read-only operations</li>
+              <li>Personal profile management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3>📊 System Statistics</h3>
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-number" id="total-users">-</span>
+            <span class="stat-label">Total Users</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="admin-count">-</span>
+            <span class="stat-label">Administrators</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" id="user-count">-</span>
+            <span class="stat-label">Regular Users</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <h3>🔒 Security Features</h3>
+        <ul>
+          <li>Session-based authentication</li>
+          <li>Role-based access control</li>
+          <li>Secure password handling</li>
+          <li>Automatic session timeout</li>
+          <li>Protected routes for unauthorized access</li>
+        </ul>
+      </div>
+</section>
+
+<script>
+// Load system statistics when the about page loads
+async function loadSystemStats() {
+  try {
+    const users = await fetch('http://localhost:3000/Users').then(res => res.json());
+    const totalUsers = users.length;
+    const adminCount = users.filter(user => user.role === 'admin').length;
+    const userCount = users.filter(user => user.role === 'user').length;
+    
+    document.getElementById('total-users').textContent = totalUsers;
+    document.getElementById('admin-count').textContent = adminCount;
+    document.getElementById('user-count').textContent = userCount;
+  } catch (error) {
+    console.error('Error loading system stats:', error);
+  }
+}
+
+// Load stats when the page is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadSystemStats);
+} else {
+  loadSystemStats();
+}
+</script>
