@@ -75,13 +75,5 @@ npm run start     # Servidor web en puerto 8080
 - `npm run start`: Inicia el servidor web (puerto 8080)
 - `npm run dev`: Ejecuta ambos servidores simultáneamente
 
-## 📞 Contacto
-
-- **Versión**: 1.0.0
-- **Última Actualización**: Diciembre 2024
-
----
-
-⭐ ¡Disfruta usando la aplicación!
 
 
